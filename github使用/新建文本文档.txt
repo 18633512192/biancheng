@@ -1,0 +1,9 @@
+github基本概念（1）
+
+仓库（Repository）
+仓库的意思，即你的项目，你想在GitHub上开发一个项目，那就必须要新建一个Repository，
+如果开发的项目多了，就拥有了多个Repository。
+
+
+收藏（Star）
+仓库主页star按钮，意思为收藏该项目的人数，

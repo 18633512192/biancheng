@@ -1,0 +1,150 @@
+@keyframes bolang1{
+    50%{
+        transform:translateX(-50px);
+    }
+}
+@keyframes bolang2{
+    50%{
+        transform:translateX(-50px);
+    }
+}
+@keyframes bolang3{
+    50%{
+        transform:translateX(-50px);
+        /* 按X轴平移 */
+    }
+}
+@keyframes shipmove{
+    /* shipmove：名字（船舶移动） */
+    50%{
+        transform:rotate(10deg);
+        /* 含义：旋转；其中“deg”是“度”的意思，如“10deg”表示“10度”下同。 */
+    }
+}
+@keyframes fishmove{
+    /* fishmove：名字（鱼的移动） */
+    0%{
+        transform: rotate(-20deg);
+        /* transform:属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。 */
+        /* 旋转 -20度 */
+        left:10px;
+        /* 距离左边10像素 */
+        top:500px;
+        /* 距离顶边500像素 */
+    }
+    10%{
+        transform: rotate(5deg);
+        left: 300px;
+        top: 300px;
+    }
+    30%{
+        transform: rotate(-20deg);
+        left:500px;
+        top:550px;
+    }
+    50%{
+        transform: rotate(5deg);
+        left: 700px;
+        top: 300px;
+    }
+    70%{
+        transform: rotate(-20deg);
+        left: 800px;
+        top: 550px;
+    }
+    90%{
+        transform: rotate(5deg);
+        left: 1100px;
+        top: 300px;
+    }
+    100%{
+        transform: rotate(5deg);
+        left: 1300px;
+        top: 500px;
+    }
+    /* 0%开始到100%%结束 */
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    height:650px;
+    overflow: hidden;
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    /* background-repeat 属性定义了图像的平铺模式。 */
+    /* no-repeat	背景图像将仅显示一次。 */
+    overflow: hidden;
+}
+.container .ship{
+    position: absolute;
+    left: 30%;
+    z-index: 5;
+    animation:shipmove 5s ease infinite;
+
+    /* animation（一个前缀）属性是一个简写属性，用于设置六个动画属性：
+    animation-name
+    animation-duration
+    animation-timing-function
+    animation-delay
+    animation-iteration-count
+    animation-direction 等 */
+
+    /* shipmove：名字（船舶移动） */
+    /* infinite:循环 */
+    /* ease 规定慢速开始，然后变快，然后慢速结束的过渡效果; */
+}
+.container .yu{
+    position: absolute;
+    left: 10px;
+    top: 500px;
+    z-index: 3;
+    animation:fishmove 10s linear 1s infinite;
+    /* fishmove：名字（鱼的移动） */
+    /* linear:线性 */
+    /* infinite:循环 */
+}
+.container .bolang{
+    margin-top:450px;
+    position: relative;
+}
+.container .bolang .bolang1{
+    position: absolute;
+    top: 100px;
+    left:0px;
+	z-index: 100;
+	height:110px;
+    width:130%;
+    background-image: url(images/wave1.png);
+    animation:bolang1 2s ease-in infinite;
+    /* ease-in 规定以慢速开始的过渡效果; */
+    /* ease-out 规定以慢速结束的过渡效果; *
+    /* ease-out 规定以慢速结束的过渡效果;/ */
+    /* wave1：对应上面的动画效果 */
+}
+.container .bolang .bolang2{
+    position: absolute;
+    top: 50px;
+    left:0px;
+	z-index: 10;
+	height:110px;
+    width:130%;
+    background-image: url(images/wave2.png);
+    animation:bolang2 3s ease-in infinite;
+    /* ease-in 规定以慢速开始的过渡效果; */
+    /* infinite:循环 */
+}
+.container .bolang .bolang3{
+    position: absolute;
+    top: 0px;
+    left:0px;
+	z-index: 0;
+	height:110px;
+    width:130%;
+    background-image: url(images/wave3.png);
+    animation:bolang3 5s ease-in infinite;
+    /* ease-in 规定以慢速开始的过渡效果; */
+    /* infinite:循环 */
+}

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@keyframes top{
+    50%{
+        transform: translateZ(300px);
+    }
+}
+body{
+    perspective: 600px;
+}
+.top{
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    animation: top ease-in 5s infinite;
+    margin: 100px auto;
+}
+/* .top:hover{
+    transform: translateZ(300px);
+}  */
